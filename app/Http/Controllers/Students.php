@@ -112,4 +112,9 @@ class Students extends Controller
         return back();
         
     }
+    public function display(Student $student)
+    {
+        $posts=$student->post;
+        return view('posts.student-posts',compact('posts'));
+    }
 }

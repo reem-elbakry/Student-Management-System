@@ -21,3 +21,7 @@ Route::get('/', function () {
 
 use App\Http\Controllers\Students;
 Route::resource('students',Students::class);
+
+use App\Http\Controllers\Posts;
+Route::resource('posts',Posts::class);
+Route::get('users/posts/{student}','App\Http\Controllers\Students@display')->name('stdposts.show');
